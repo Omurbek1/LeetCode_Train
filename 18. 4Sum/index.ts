@@ -1,37 +1,44 @@
 var fourSum = function(nums, target) {
-	const result = [];
-	if (nums.length < 4) return result;
-	nums.sort((a, b) => a - b);
-	const len = nums.length;
-	for (let i = 0; i < len - 3; i++) {
-		if (nums[i] + nums[i + 1] + nums[i + 2], nums[i + 3] > target) break;
-		if (i > 0 && nums[i] === nums[i - 1]) continue;
-		if (nums[i] + nums[len - 3] + nums[len - 2] + nums[len - 1] < target) continue;
-		for (let j = i + 1; j < len - 2; j++) {
-			if (nums[i] + nums[j] + nums[j + 1], nums[j + 2] > target) break;
-			if (j > i + 1 && nums[j] === nums[j - 1]) continue;
-			if (nums[i] +nums[j]+ nums[len - 2] + nums[len - 1] < target) continue;
-			let left = j + 1,
-				right = len - 1;
-			while (left < right) {
-				const sum = nums[i] + nums[j] + nums[left] + nums[right];
-				if (sum === target) {
-					result.push([ nums[i], nums[j], nums[left], nums[right]]);
-					while (left < right && nums[left] === nums[left + 1]) {
-						left++;
-					}
-					left++;
-					while (left < right && nums[right] === nums[right - 1]) {
-						right--;
-					}
-					right--;
-				} else if (sum < target) {
-					left++;
-				} else {
-					right--;
-				}
-			}
-		}
-	}
-	return result;
-};
+    if (nums.length < 4) return [];
+  
+    var len = nums.length;
+    var res = [];
+    var l = 0;
+    var r = 0;
+    var sum = 0;
+  
+    nums.sort((a, b) => (a - b));
+  
+    for (var i = 0; i < len - 3; i++) {
+      if (i > 0 && nums[i] === nums[i - 1]) continue;
+      if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) break;
+      if (nums[i] + nums[len - 1] + nums[len - 2] + nums[len - 3] < target) continue;
+      
+      for (var j = i + 1; j < len - 2; j++) {
+        if (j > i + 1 && nums[j] === nums[j - 1]) continue;
+        if (nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target) break;
+        if (nums[i] + nums[j] + nums[len - 1] + nums[len - 2] < target) continue;
+        
+        l = j + 1;
+        r = len - 1;
+  
+        while (l < r) {
+          sum = nums[i] + nums[j] + nums[l] + nums[r];
+  
+          if (sum < target) {
+            l++;
+          } else if (sum > target) {
+            r--;
+          } else {
+            res.push([nums[i], nums[j], nums[l], nums[r]]);
+            while (l < r && nums[l] === nums[l + 1]) l++;
+            while (l < r && nums[r] === nums[r - 1]) r--;
+            l++;
+            r--;
+          }
+        }
+      }
+    }
+  
+    return res;
+  };
