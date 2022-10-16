@@ -14,7 +14,7 @@ var letterCombinations = function(digits) {
         '8': 'tuv',
         '9':'wxyz'
     }
-    const dfs = (i, digits, slate) => {
+    const dfs = (i, digits, slate:any) => {
         
         if (i === digits.length) {
             result.push(slate.join(''));
