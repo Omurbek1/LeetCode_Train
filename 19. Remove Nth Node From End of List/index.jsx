@@ -1,3 +1,6 @@
+
+// 19. Remove Nth Node From End of List
+
 const removeNthFromEnd = function (head, n) {
     let dummyHead = new ListNode(-Infinity)
     dummyHead.next = head
@@ -9,7 +12,6 @@ const removeNthFromEnd = function (head, n) {
         counnt ++
         tail = tail.next
     }
-
     let removedNode = head
     let prev = dummyHead;
 
