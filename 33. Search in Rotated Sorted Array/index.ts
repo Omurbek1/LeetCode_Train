@@ -1,3 +1,3 @@
-var search = function(nums, target) {
+const search = function(nums, target) {
     
 };
