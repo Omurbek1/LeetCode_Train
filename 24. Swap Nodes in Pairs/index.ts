@@ -9,10 +9,12 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
- var swapPairs = function(head) {
+var swapPairs = function (head) {
+     
      const dummy = new ListNode();
-     let temp=dummy
      dummy.next = head;
+     let temp=dummy
+    
      while (temp.next && temp.next.next) {
          let node1 = temp.next;
          let node2 = temp.next.next
@@ -20,6 +22,7 @@
          node1.next = node2.next;
          node2.next=node1
          temp=node1
-     }
+    }
+    
      return dummy.next
 };
