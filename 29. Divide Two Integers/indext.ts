@@ -13,5 +13,15 @@ var divide = function(dividend, divisor) {
     
     let dd = Math.abs(dividend)
     let dv = Math.abs(divisor)
-    let res =0,i=1 , tmp=dv
+    let res = 0, i = 1, tmp = dv
+    
+    while (dd >= dv) {
+        i = 1
+        tmp = dv
+        
+
+        dd = dd - tmp
+        res+=i
+        
+    }
 };
