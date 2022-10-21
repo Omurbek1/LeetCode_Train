@@ -5,7 +5,7 @@ var divide = function(dividend, divisor) {
         return dividend
     } else if (divisor == -1) {
         if (dividend == -2147483648) {
-            return 2147483648
+            return 2147483647
         }
         return -dividend;
     }
@@ -19,9 +19,14 @@ var divide = function(dividend, divisor) {
         i = 1
         tmp = dv
         
-
+        while (tmp <= (dd >> 1)) {
+            tmp = tmp << 1
+            i=i<<1
+        }
         dd = dd - tmp
         res+=i
-        
+    } if (minus) {
+        res=-res
     }
+    return Math.min(2147483647,Math.max(res,-2147483648))
 };
