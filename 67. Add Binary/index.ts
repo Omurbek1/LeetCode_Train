@@ -20,5 +20,10 @@ const addBinary = function(a, b) {
 
         result[MaxLength - i] = sum % 2;
         carryOver=Math.floor(sum/2)
-	}
+    }
+    if (carryOver > 0) {
+        result.unshift(1)
+    }
+
+    return result.join('')
 };
