@@ -1,7 +1,7 @@
 var findMedianSortedArrays = function(nums1, nums2) {
-	var len1 = nums1.length;
-	var len2 = nums2.length;
-	var total = len1 + len2;
+	var len1:number = nums1.length;
+	var len2:number = nums2.length;
+	var total:number = len1 + len2;
 
 	if (total % 2) {
 		return findKthOfTwoSortedArrays(nums1, len1, nums2, len2, parseInt(total / 2 + 1));
