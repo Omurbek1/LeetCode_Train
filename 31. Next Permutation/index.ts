@@ -8,5 +8,11 @@
          i--
         
      }
+     if (i === -1) {
+         nums.sort((a, b) => a - b)
+         
+     } else {
+         nums[i]
+     }
      
 };
