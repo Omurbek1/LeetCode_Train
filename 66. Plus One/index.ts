@@ -14,4 +14,6 @@
          }
         
      }
+     digits.unshift(1)
+     return digits;
 };
