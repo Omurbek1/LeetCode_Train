@@ -15,11 +15,12 @@ const addBinary = function(a, b) {
 	let i = 0;
 
 	while (i < MaxLength) {
-        const sum = (a.length - i < 0 ? 0 : a[a.length - i] * 1) +
-            (b.length - i < 0 ? 0 : b[b.length - i] * 1)+carryOver;
+        const sum = (a.length - i < 0 ? 0 : a[a.length -1- i] * 1) +
+            (b.length - 1-i < 0 ? 0 : b[b.length - i] * 1)+carryOver;
 
         result[MaxLength - i] = sum % 2;
-        carryOver=Math.floor(sum/2)
+        carryOver = Math.floor(sum / 2)
+        i+=1
     }
     if (carryOver > 0) {
         result.unshift(1)
