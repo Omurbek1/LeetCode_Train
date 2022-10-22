@@ -10,15 +10,19 @@
          return lastWorldLength
      }
 
-     for (let i = 0; i < s.length; i--) {
+     for (let i = s.length-1; i >=0; i--) {
          if (s.charAt(i) !== ' ') {
              lastWorldLength++
              beforeFirstNonEmptyChar=false
          } else {
              if (!beforeFirstNonEmptyChar) {
-                
+                 break;
              }
         }
         
      }
+     return lastWorldLength
 };
+
+
+console.log('Эн акыркы создун жалпы узундугу'+' '+lengthOfLastWord('My Nmae Omurbek'))
