@@ -1,6 +1,6 @@
 const deleteDuplicates = function(head) {
 
-    let dummy = new List(-Infinity, head)
+    let dummy = new ListNode(-Infinity, head)
     let curr = head
     let prev = dummy;
 
@@ -13,7 +13,7 @@ const deleteDuplicates = function(head) {
             prev.next=curr
              
         } else {
-            prev.next = curr
+            prev = curr
             curr=curr.next
         }
         
