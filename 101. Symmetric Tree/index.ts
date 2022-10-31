@@ -11,6 +11,16 @@
  * @return {boolean}
  */
  var isSymmetric = function(root) {
-    let res=true;
+     let res = true;
+     
+     function helper(node1, node2) {
+         if (!node1 && node2) {
+             return
+         }
+         if (!node1 || node2 || node1.val !== node2.val) {
+             res = false
+             return
+         }
+     }
      return res;
 };
