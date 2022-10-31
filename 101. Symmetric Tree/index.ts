@@ -11,5 +11,6 @@
  * @return {boolean}
  */
  var isSymmetric = function(root) {
-    
+    let res=true;
+     return res;
 };
