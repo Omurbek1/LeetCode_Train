@@ -11,8 +11,7 @@
             
          }
          left++
-         right--
-        
+         right--  
      }
      return true
 };
