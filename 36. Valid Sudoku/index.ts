@@ -17,7 +17,7 @@
                  }
                  row[`${i}-${value}`] = true
                  column[`${j}-${value}`] = true
-                 box[`${boxidX}-${value}`]
+                 box[`${boxidX}-${value}`]=true
              }
          }
      }
