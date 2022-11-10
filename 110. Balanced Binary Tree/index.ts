@@ -10,7 +10,7 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isBalanced = function(root) {
+const isBalanced = function(root) {
 	let res = true;
     let maxDepth = (node) => {
         if (!node) return 0
@@ -18,7 +18,7 @@ var isBalanced = function(root) {
         if (Math.abs(l - r) > 1) res = false
         
         return 1 + Math.max(l, r)
-        
+
     }
     maxDepth(root)
     return res
