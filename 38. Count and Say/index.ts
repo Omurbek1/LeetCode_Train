@@ -1,3 +1,4 @@
+// typescript
 function countAndSay(n: number): string {
 	let result = '1';
 
