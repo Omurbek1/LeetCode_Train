@@ -23,5 +23,6 @@ function findTheDifference(s: string, t: string): string {
         t = t.replace(item, '')
     }
     
+    
       return t
 };
