@@ -18,8 +18,10 @@ Input: s = "", t = "y"
 Output: "y"
  */
 function findTheDifference(s: string, t: string): string {
+
     for(let item of s){
         t = t.replace(item, '')
-      }
+    }
+    
       return t
 };
