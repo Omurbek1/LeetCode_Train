@@ -29,8 +29,6 @@ Constraints:
 
 1 <= n <= 231 - 1
  */
-
-
 function isHappy(n: number): boolean{
     let seen = new Set()
     
