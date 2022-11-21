@@ -30,9 +30,7 @@ Constraints:
 1 <= n <= 231 - 1
  */
 
-interface Istate{
-sum:string |number
-}
+
 function isHappy(n: number): boolean{
     let seen = new Set()
     
