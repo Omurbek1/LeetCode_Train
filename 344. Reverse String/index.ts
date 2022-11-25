@@ -10,6 +10,7 @@ function reverseString(s: string[]): void {
         right--
     }
     
+    
 };
 
-console.log(reverseString('Hello'))
+console.log(reverseString)
