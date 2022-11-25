@@ -11,3 +11,5 @@ function reverseString(s: string[]): void {
     }
     
 };
+
+console.log(reverseString('Hello'))
