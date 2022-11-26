@@ -61,7 +61,8 @@ Output:
 +-----------+
 */
 
-SELECT name Customers
-FROM Customers
+SELECT name customers
+FROM customers
 WHERE id not in 
-SELECT Customers FROM orders
+  (SELECT customerId   FROM orders)
+;
