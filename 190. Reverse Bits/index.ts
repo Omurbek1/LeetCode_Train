@@ -26,6 +26,5 @@ Explanation: The input binary string 11111111111111111111111111111101 represents
  * @param n 
  * @returns 
  */
-
 const reverseBits = (n) =>
     Number.parseInt(n.toString(2).padStart(32, '0').split('').reverse().join(''), 2)
