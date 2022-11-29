@@ -1,6 +1,6 @@
 function minDepth(root: TreeNode | null): number {
 
-    if (root===null) return 0
+    if (root === null) return 0
 
     let minDepth = 1
     let queque = [root]
