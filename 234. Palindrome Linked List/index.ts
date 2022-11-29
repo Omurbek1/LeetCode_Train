@@ -59,7 +59,7 @@ function isPalindrome(head: ListNode | null): boolean {
     while (len) {
         len--
 
-        if (mid.val !== startPointter.val) return false
+        if (mid.val!== startPointter.val) return false
         mid = mid.next
         startPointter=startPointter.next
     }
