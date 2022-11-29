@@ -36,7 +36,6 @@ const reverse = head => {
     return prev
 }
 
-
 function isPalindrome(head: ListNode | null): boolean {
     let fast = head
     let slow = head
