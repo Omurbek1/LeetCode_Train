@@ -28,7 +28,6 @@ Output: false
 const reverse = head => {
     let cur = head;
     let prev = null
-    
     let next;
 
     while (cur) {
