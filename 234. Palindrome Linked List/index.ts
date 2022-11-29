@@ -23,13 +23,10 @@ Output: false
  * @param head 
  * @returns 
  */
-
-
 const reverse = head => {
     let cur = head;
     let prev = null
     let next;
-
     while (cur) {
         next = cur.next
         cur.next = prev
@@ -41,7 +38,6 @@ const reverse = head => {
 
 
 function isPalindrome(head: ListNode | null): boolean {
-
     let fast = head
     let slow = head
     let startPointter = head
