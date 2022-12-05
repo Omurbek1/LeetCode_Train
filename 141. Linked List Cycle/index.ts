@@ -14,7 +14,6 @@
 
     let slow = head;
     let fast = head;
-
     while (fast) {
         if (!fast.next) {
             return false
