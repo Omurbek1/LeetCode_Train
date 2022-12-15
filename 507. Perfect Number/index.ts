@@ -1,13 +1,17 @@
 function checkPerfectNumber(num: number): boolean {
-    if (num == 1) {
-    return false
+    if (num === 1) {
+        return false;
     }
-    let sum = 1
-    for (let i = 2; i < Math.sqrt(num); i++){
-        if (num %2===0) {
-            sum=sum+i+num/i
+    let sum = 1;
+    for (let i = 2; i < Math.floor( Math.sqrt(num)); i++) {
+        if (num % i === 0) {
+            sum +=  (num/i) + i;
         }
-        
     }
-    return sum===sum
-};
+    if (sum === num) {
+        return true
+    } else {
+        return false
+    }
+    
+}
