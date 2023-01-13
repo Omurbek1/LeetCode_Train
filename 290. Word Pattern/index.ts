@@ -1,6 +1,6 @@
-function wordPattern(pattern: any, str: any): boolean {
+function wordPattern(pattern: any, s: any): boolean {
 
-    const sWord = str.split(" ")
+    const sWord = s.split(" ")
     if (sWord.length !== pattern.length) return false
     
     const patterMap = new Map()
