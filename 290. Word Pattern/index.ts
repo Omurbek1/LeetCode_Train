@@ -1,6 +1,5 @@
 function wordPattern(pattern: any, str: any): boolean {
 
-
     const sWord = str.split(" ")
     if (sWord.length !== pattern.length) return false
     
