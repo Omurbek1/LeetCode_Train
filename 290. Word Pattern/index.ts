@@ -1,24 +1,4 @@
 function wordPattern(pattern: any, str: any): boolean {
-    // const mapCharToWord = {}
-    // const mapWordToChar = {}
-
-    // pattern = pattern.split('')
-    // str = str.split(' ')
-    // if (pattern.length != str.length) return false
-
-    // for (let i = 0; i < str.length; i++) {
-    //     let cutWord = str[i]
-    //     let curLetter = pattern[i]
-
-    //     if (mapCharToWord[curLetter] !== undefined && mapCharToWord[curLetter] !== cutWord) return false
-    //     if (mapWordToChar[cutWord] !== undefined && mapWordToChar[cutWord] !== curLetter) return false
-
-    //     mapWordToChar[cutWord] = curLetter
-    //     mapCharToWord[curLetter] = cutWord
-
-
-    // }
-    // return true
 
 
     const sWord = str.split(" ")
