@@ -41,5 +41,4 @@ const solution = function (isBadVersion: any) {
         return end
     };
     
-  
 }
