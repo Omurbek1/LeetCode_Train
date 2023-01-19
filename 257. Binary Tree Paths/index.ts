@@ -1,3 +1,4 @@
+
 function binaryTreePaths(root: TreeNode | null): string[] {
     let stack = [];
     let current;
