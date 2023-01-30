@@ -13,5 +13,20 @@
  */
 
 function sumOfLeftLeaves(root: TreeNode | null): number {
+    let sum=0
+    function dfc(root) {
+        if (root === null) return
+        if (root.left) {
+            let temp = root.left
+            if (!temp.left && !temp.right) {
+                sum += temp.val
+            }
+        }
+        dfc(root.left)
+        dfc(root.right)
+    }
+    dfc(root)
+    return sum
+
 
 };
