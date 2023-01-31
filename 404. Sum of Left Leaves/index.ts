@@ -11,7 +11,7 @@
  *     }
  * }
  */
-
+// @ts-ignore
 function sumOfLeftLeaves(root: TreeNode | null): number {
     let sum=0
     function dfc(root) {
