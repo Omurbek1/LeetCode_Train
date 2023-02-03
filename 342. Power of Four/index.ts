@@ -21,6 +21,7 @@ Example 3:
 Input: n = 1
 Output: true
  */
+// @ts-ignore
 function isPowerOfFour(n: number): boolean {
 
     if (n <= 0) {
