@@ -26,7 +26,7 @@ Example 2:
 Input: nums = [0]
 Output: [0]
   */
-function moveZeroes(nums: number[]): void {
+const moveZeroes=(nums: number[]): void=> {
     let index=0;
     for(let i=0;i<nums.length;i++){
         if(nums[i]!==0){
