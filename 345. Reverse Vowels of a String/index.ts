@@ -19,32 +19,39 @@ Output: "leotcede"
  */
 
 function reverseVowels(s: string): string {
+    //TODO: 1) Строим дерево
     const vowels = {}
+    //TODO: 2) Строим цикл
     for (const char of 'aeiouAEIOU') {
         vowels[char] = true;
     }
+    //TODO: 3) Перебираем строку
 
     const characters = s.split('');
-
+    //TODO: 4)ПЕРЕБИРАЕМ СТРОКУ
     let left = 0;
     let right = s.length - 1;
-
+//TODO: 5) Строим условие
     while (left < right) {
         while (left < right && !(s[left] in vowels)) {
             left++;
         }
+        //TODO: 6) Строим условие
 
         while (left < right && !(s[right] in vowels)) {
             right--;
         }
+        //TODO: 7)Функция обмена
         swap(characters, left, right);
         left++;
         right--;
 
     }
+    //TODO: 8) Возвращаем результат
     return characters.join('');
 };
 
+//TODO: 9) Функция обмена
 const swap = (arr, i, j) => {
     const temp = arr[i];
     arr[i] = arr[j];
