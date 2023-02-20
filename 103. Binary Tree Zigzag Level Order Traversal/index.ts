@@ -36,25 +36,46 @@ Output: []
  */
 
 function zigzagLevelOrder(root: TreeNode | null): number[][] {
+    //! 1. Строим дерево 
     if(!root) return [];
+    //! 2. Строим очередь
     const result=[];
+    //! 3. Строим цикл
     const queue=[root];
+    //! 4. Строим счетчик
     let count=0;
+    //! 5. Строим цикл
 
     while(queue.length){
+        //! 6. Строим длину очереди
         let len=queue.length;
-
+        //* 7. Строим условие
         if(count%2===0)result.push(queue.map(node=>node.val)) 
+        //* 8. Строим условие
         else result.push(queue.map(node=>node.val).reverse());
+        //* 9.счетчик
         count++;
 
+        //* 10. Строим очередь
         while(len--){
-            let node=queue.shift();
+            //* 11. Строим длину очереди
+            let len2=queue.length;
+            //* 12. Строим условие
+            if(count%2===0)result.push(queue.map(node=>node.val)) 
+            //* 13. Строим условие
+            else result.push(queue.map(node=>node.val).reverse());
+            //* 14.счетчик
+            count++;
 
+            //* 15. Строим очередь
+            let node=queue.shift();
+//             //* 16. Строим условие
             if(node.left) queue.push(node.left);
+            //* 17. Строим условие
             if(node.right) queue.push(node.right);
         }
     }
+    //* 18. вернуть результат
     return result
 
 };
