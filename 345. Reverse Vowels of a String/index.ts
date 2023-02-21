@@ -45,7 +45,6 @@ function reverseVowels(s: string): string {
         swap(characters, left, right);
         left++;
         right--;
-
     }
     //TODO: 8) Возвращаем результат
     return characters.join('');
