@@ -2,8 +2,8 @@ const detectCapitalUse=(word: string): boolean =>{
     let capitalCount=0;
 
     for(let i=0;i<word.length;i++){
-        const char=word[i];
-        if(char.toUpperCase()){
+        const char = word[i];
+        if(char===char.toUpperCase()){
             capitalCount++
         }
     }
