@@ -1,12 +1,28 @@
-const NumArray = function(nums: number[]) {
-    let sums = 0;
-    for(let i=0;i<nums.length;i++){
-        sums[i]=i===0 ? nums[0]:sums[i-1]+nums[i];
+// Initialize your data structure here.
+var NumArray = function(nums) {
+    this.array = nums;
+    this.sumCache = [0];
+    // Fill cache with prefix sums
+    // i.e. the sum of all elements before position i
+    for (let i = 0; i < nums.length; i++) {
+      this.sumCache[i + 1] = this.array[i] + this.sumCache[i];
     }
-   this.sums=nums;
+};
 
-    NumArray.prototype.sumRange = function(i: number, j: number): number {
-        return i===0 ? sums[j]:sums[j]-sums[i-1];
-    }
-   
-}
+// Time complexity is O(1) 
+// Space complexity is O(n)
+
+/** 
+ * @param {number} i 
+ * @param {number} j
+ * @return {number}
+ */
+NumArray.prototype.sumRange = function(i, j) {
+    return this.sumCache[j+1] - this.sumCache[i];
+};
+
+/** 
+ * Your NumArray object will be instantiated and called as such:
+ * var obj = new NumArray(nums)
+ * var param_1 = obj.sumRange(i,j)
+ */
