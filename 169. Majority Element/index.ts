@@ -34,7 +34,6 @@ const majorityElement=(nums: number[]): number=> {
             obj[i]++
         }
     }
-
     for(let j in obj){
         if(obj[j]>count){
 count=obj[j];
