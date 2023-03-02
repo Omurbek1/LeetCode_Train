@@ -12,7 +12,7 @@
  * }
  */
 
-function diameterOfBinaryTree(root: TreeNode | null): number {
+const diameterOfBinaryTree=(root: any | null): number =>{
     if (!root) return 0;
 
     let max=0;
