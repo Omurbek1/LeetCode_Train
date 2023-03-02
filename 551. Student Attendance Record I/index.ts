@@ -1,4 +1,4 @@
-function checkRecord(s: string): boolean {
+const checkRecord=(s: string): boolean=> {
     let absent=0
     let late=0
     for(let i=0;i<s.length;i++){
