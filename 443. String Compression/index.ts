@@ -1,28 +1,42 @@
+/**
+ * 
+ * @param chars 
+ * @returns 
+ * function compress(chars: string[]): number {
+  chars.push('End'); // add a dummy char to the end
+  let times=0;
+  let current=chars[0];
+  while(current!=='End'){
+    if(chars[0]===current){
+        times++;
+        chars.shift();
+    }else{
+        chars.push(current);
+        times>1 && chars.push(...(times+''));
+        times=0;
+        current=chars[0];
+    }
+  }
+  chars.shift();
+  return chars.length;
+};
+ */
+
 function compress(chars: string[]): number {
-    let currentLetter:any=null;
-    let currentLetterCount=0;
-    let indexToPut=0;
-
-    for(let i=0;i<chars.length;i++){
-        const char=chars[i];
-
-        if(char!==currentLetter){
-            if(currentLetter!==null){
-                chars[indexToPut]=currentLetter;
-                indexToPut+=1;
-                if(currentLetterCount>1){
-                    const countInStr=`${currentLetterCount}`;
-                    for(let digit of countInStr){
-                        chars[indexToPut]=digit;
-                        indexToPut+=1;
-                    }
-                }
-            }
-            currentLetter=char;
-            currentLetterCount=1;
-        }else{
-            currentLetterCount+=1;
+    chars.push('End'); // add a dummy char to the end
+    let times = 0;
+    let current = chars[0];
+    while (current !== 'End') {
+        if (chars[0] === current) {
+            times++;
+            chars.shift();
+        } else {
+            chars.push(current);
+            times > 1 && chars.push(...(times + ''));
+            times = 0;
+            current = chars[0];
         }
     }
-    return indexToPut;
+    chars.shift();
+    return chars.length;
 };
