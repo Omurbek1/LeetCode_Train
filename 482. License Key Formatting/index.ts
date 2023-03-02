@@ -1,4 +1,4 @@
-function licenseKeyFormatting(s: string, k: number): string {
+const licenseKeyFormatting = (s: string, k: number): string => {
     let newStr = s.replace(/-/g, '').toUpperCase()
     let arr = newStr.split('')
 
