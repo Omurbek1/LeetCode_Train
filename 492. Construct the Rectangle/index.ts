@@ -1,4 +1,4 @@
-function constructRectangle(area: number): number[] {
+const constructRectangle=(area: number): number[] =>{
     let diff = 9999999999;
     let solArr = [];
     for (let i = 1; i <= Math.ceil(area / 2); i++) {
