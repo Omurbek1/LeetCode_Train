@@ -12,7 +12,7 @@
  * }
  */
 
-const tree2str = (root: TreeNode | null): string => {
+const tree2str = (root: any): string => {
     if (!root) {
         return "";
     }
