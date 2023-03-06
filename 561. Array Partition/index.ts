@@ -29,6 +29,4 @@ Explanation: The optimal pairing is (2, 1), (2, 5), (6, 6). min(2, 1) + min(2, 5
  */
 
 
-function arrayPairSum(nums: number[]): number {
-    return nums.sort((a, b) => a - b).filter((a, i) => !(i % 2)).reduce((a, b) => a + b, 0)
-};
+const arrayPairSum=(nums: number[]): number => {return nums.sort((a, b) => a - b).filter((a, i) => !(i % 2)).reduce((a, b) => a + b, 0)}
