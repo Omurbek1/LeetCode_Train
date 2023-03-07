@@ -15,6 +15,5 @@ function countBinarySubstrings(s: string): number {
             count++;
         }
     }
-
     return count;
 };
