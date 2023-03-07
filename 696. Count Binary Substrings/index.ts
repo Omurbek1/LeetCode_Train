@@ -1,4 +1,5 @@
 function countBinarySubstrings(s: string): number {
+    
     let count = 0;
     let prevLength = 0;
     let curLength = 1;
