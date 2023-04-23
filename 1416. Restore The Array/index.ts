@@ -17,7 +17,7 @@ function numberOfArrays(s: string, k: number): number {
         let num=0;
         for (let i = start; i < n; i++) {
             num=num*10+parseInt(s[i]);
-            if(num>=k){
+            if(num>k){
                 break;
             }
             count=(count+dp(i+1))%mod;
