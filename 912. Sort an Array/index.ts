@@ -1,15 +1,12 @@
 function sortArray(nums: number[]): number[] {
-    let n = nums.length;
-    for (var i = 0; i < n - 1; i++) {
-        var min = i;
-        for (let j = i + 1; j < n; j++) {
-            if (nums[j] < nums[min]) {
-                min = j;
-            }
+    for (let i = 1; i < nums.length; i++) {
+        let value = nums[i];
+        let hole = i;
+        while (hole > 0 && nums[hole - 1] > value) {
+            nums[hole] = nums[hole - 1];
+            hole = hole - 1
         }
-        let temp = nums[i];
-        nums[i] = nums[min];
-        nums[min] = temp;
+        nums[hole] = value;
     }
     return nums;
 };
