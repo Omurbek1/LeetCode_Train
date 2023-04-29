@@ -6,7 +6,6 @@ const NumArray = function (nums) {
     this.sums[i] = this.sums[i - 1] + nums[i];
   }
 };
-
 NumArray.prototype.sumRange = function (left, right) {
   if (left === 0) {
     return this.sums[right];
