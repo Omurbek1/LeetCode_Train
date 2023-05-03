@@ -8,7 +8,7 @@ function commonChars(words: string[]): string[] {
                 next[c] = (next[c] || 0) + 1
             }
             else if (prev[c]) {
-                prev[c] -= 1;
+                prev[c] -= 1 as any;
                 next[c] = (next[c] || 0) + 1;
             }
         }
