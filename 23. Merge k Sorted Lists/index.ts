@@ -10,6 +10,7 @@
  * }
  */
 
+type ListNode = any
 function getMinNodeIndex(lists: Array<ListNode | null>): number {
     let min = Infinity;
     let minIndex = -1;
@@ -26,7 +27,7 @@ function getMinNodeIndex(lists: Array<ListNode | null>): number {
     return minIndex;
 }
 function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
-    let mergedCurrent = null;
+    let mergedCurrent: any = null;
     let mergedRoot = null;
 
     while (true) {
