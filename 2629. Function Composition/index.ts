@@ -2,7 +2,11 @@ type F = (x: number) => number;
 
 function compose(functions: F[]): F {
     return x => {
-        functions.reduceRight((acc, fn) => fn(acc), x)
+        let result = x;
+        for (let i = functions.length - 1; i >= 0; i--) {
+            result = functions[i](result);
+        }
+        return result;
     }
 };
 
