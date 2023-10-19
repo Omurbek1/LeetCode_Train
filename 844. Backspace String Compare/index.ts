@@ -1,6 +1,6 @@
 function backspaceCompare(s: string, t: string): boolean {
-    const stack1=[];
-    const stack2=[]
+    const stack1=[] as any[];
+    const stack2=[] as any[]
     for(let i=0;i<s.length;i++){
         if(s[i]==='#'){
             stack1.pop()
