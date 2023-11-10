@@ -20,12 +20,7 @@ const search = function(nums, target) {
                 end=mid-1
             }
         }
-        // if (nums[mid] === target) return mid
-        // if (nums[mid] > target) {
-        //     start = mid + 1;
-        // } else {
-        //     end=mid-1
-        // }
+      
     }
     return -1
 };
