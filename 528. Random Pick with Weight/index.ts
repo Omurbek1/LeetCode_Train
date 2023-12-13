@@ -1,16 +1,15 @@
 class Solution {
     weights: number[]
-
     constructor(w: number[]) {
-        const sum = w.reduce((a, b) => a + b)
+        const sum = w.reduce((acc, cur) => acc + cur)
+
         this.weights = w
+
         for (let i = 0; i < w.length; i++) {
             const num = w[i]
             this.weights[i] = num / sum
             if (i > 0) this.weights[i] += this.weights[i - 1]
         }
-
-
     }
 
     pickIndex(): number {
@@ -21,14 +20,8 @@ class Solution {
             const mid = Math.floor((left + right) / 2)
             if (randomNum > this.weights[mid]) left = mid + 1
             else right = mid
-
         }
+
         return left
     }
 }
-
-/**
- * Your Solution object will be instantiated and called as such:
- * var obj = new Solution(w)
- * var param_1 = obj.pickIndex()
- */
