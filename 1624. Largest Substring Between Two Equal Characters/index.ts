@@ -1,15 +1,16 @@
 function maxLengthBetweenEqualCharacters(s: string): number {
 
-    const charMap = new Map();
-    for (let i = 0; i < s.length; i++) {
-        charMap.set(s[i], i);
-    }
+    const map = new Map<string, number>();
+
     let max = -1;
     for (let i = 0; i < s.length; i++) {
-        for (let j = i + 1; j < s.length; j++) {
-            if (charMap.get(s[i]) === charMap.get(s[j])) continue;
-            max = Math.max(max, j - i - 1);
+        if (map.has(s[i])) {
+            const len = i - map.get(s[i]) - 1;
+            max = Math.max(max, len);
+            continue;
         }
+
+        map.set(s[i], i);
     }
     return max;
 };
