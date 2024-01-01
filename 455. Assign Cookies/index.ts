@@ -26,17 +26,15 @@ You need to output 2.
  */
 
 function findContentChildren(g: number[], s: number[]): number {
-    let contentcgildren = 0;
-
-    const sortedG = g.sort((a, b) => a - b);
-    const sortedS = s.sort((a, b) => a - b);
-
-    for (let i = g.length - 1; i >= 0; i--) {
-        if (g[i] <= s[s.length - 1]) {
-            contentcgildren++;
-            s.pop()
+    g.sort((a, b) => a - b);
+    s.sort((a, b) => a - b);
+    let i = 0;
+    let j = 0;
+    while (i < g.length && j < s.length) {
+        if (s[j] >= g[i]) {
+            i++;
         }
+        j++;
     }
-
-    return contentcgildren;
+    return i;
 };
