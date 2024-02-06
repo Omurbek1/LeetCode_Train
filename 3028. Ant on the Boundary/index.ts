@@ -1,11 +1,9 @@
 function returnToBoundaryCount(nums: number[]): number {
-    const set=new Set();
-    for(let i=0;i<nums.length;i++){
-        if(nums[i]===1){
-            set.add(i)
-        }else{
-            set.delete(i)
-        }
-    }
-    return set.size
+  let res = 0;
+  let sum = 0;
+  for (let num of nums) {
+    sum += num;
+    if (sum === 0) res++;
+  }
+  return res;
 }
