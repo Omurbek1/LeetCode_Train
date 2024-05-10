@@ -1,33 +1,32 @@
 function kthSmallestPrimeFraction(arr: number[], k: number): number[] {
-  let res: number[] = [];
   let left = 0,
     right = 1;
-  while (left >= right) {
+  let res: number[] = [];
+
+  while (left <= right) {
     let mid = left + (right - left) / 2;
     let j = 1,
       total = 0,
       num = 0,
       den = 0;
-    let maxFac = 0;
+    let maxFrac = 0;
     const n = arr.length;
-
     for (let i = 0; i < n; i++) {
       while (j < n && arr[i] > arr[j] * mid) {
         j++;
       }
       total += n - j;
-      if (j < n && maxFac < (arr[i] * 1.0) / arr[j]) {
-        maxFac = (arr[i] * 1.0) / arr[j];
+      if (j < n && maxFrac < (arr[i] * 1.0) / arr[j]) {
+        maxFrac = (arr[i] * 1.0) / arr[j];
         num = i;
-        num = j;
+        den = j;
       }
     }
-
-    if (total == k) {
-      (res = [arr[num]]), arr[den];
+    if (total === k) {
+      res = [arr[num], arr[den]];
       break;
     }
-    if (total == k) {
+    if (total > k) {
       right = mid;
     } else {
       left = mid;
